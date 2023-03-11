@@ -1,13 +1,14 @@
-import { useState } from 'react';
-import './App.css';
+import './app.css';
+import LoginForm from './components/login/LoginForm';
 
 const App = () => {
+    const compName = 'app';
 
-  return (
-    <div className="App">
-
-    </div>
-  )
-}
+    return (
+        <div className={compName}>
+            <LoginForm />
+        </div>
+    )
+};
 
 export default App;
