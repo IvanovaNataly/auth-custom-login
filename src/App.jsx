@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from "@emotion/react";
 import LoginForm from './components/login/LoginForm';
+import AuthButton from './components/auth/AuthButton';
 
 const styles = {
     app: css`
@@ -18,7 +19,7 @@ const App = () => {
 
     return (
         <div className={compName} css={styles.app}>
-            <LoginForm />
+            <AuthButton />
         </div>
     )
 };
