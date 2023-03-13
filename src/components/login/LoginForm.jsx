@@ -1,5 +1,5 @@
 import { TextField, Button, Box, Typography } from '@mui/material';
-import './loginForm.css';
+import { loginStyles } from './loginStyles.js';
 import auth0 from 'auth0-js';
 import { validator } from './validator.js';
 import useForm from './useForm.js';
@@ -70,6 +70,7 @@ const LoginForm = () => {
         <Box
             component='form'
             className={compName}
+            sx={loginStyles.container}
             onSubmit={handleSubmit}
         >
             <Typography variant='h1' align='center' color='primary' fontWeight='600' sx={{fontSize: 24, marginBottom: 3}}>
@@ -89,7 +90,8 @@ const LoginForm = () => {
                            required
                            variant='outlined'
                            key={field}
-                           className={`${compName}-textField`}/>
+                           className={`${compName}-textField`}
+                           sx={loginStyles.textField}/>
             )) }
 
             <Button type='submit'
