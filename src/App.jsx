@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { jsx, css } from "@emotion/react";
+import { css } from "@emotion/react";
 import LoginForm from './components/login/LoginForm';
 import AuthButton from './components/auth/AuthButton';
 

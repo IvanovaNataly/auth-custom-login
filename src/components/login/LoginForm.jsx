@@ -1,4 +1,6 @@
-import { TextField, Button, Box, Typography } from '@mui/material';
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import { TextField, Button, Box, Typography, Avatar } from '@mui/material';
 import { loginStyles } from './loginStyles.js';
 import auth0 from 'auth0-js';
 import { validator } from './validator.js';
@@ -73,8 +75,31 @@ const LoginForm = () => {
             sx={loginStyles.container}
             onSubmit={handleSubmit}
         >
+            <Avatar
+                alt="Avatar"
+                src="/images/confused_dog.gif"
+                sx={loginStyles.avatar}
+            />
+
             <Typography variant='h1' align='center' color='primary' fontWeight='600' sx={{fontSize: 24, marginBottom: 3}}>
-                Welcome
+                Custom Login Page
+            </Typography>
+
+            <Typography variant="body1" sx={loginStyles.paragraph}>You are landed on a Custom Login Page hosted at Auth0 domain.</Typography>
+            <Typography variant="body1" sx={loginStyles.paragraph}>The page is a SPA uploaded with a single js file.</Typography>
+            <Typography variant="body1" sx={loginStyles.paragraph}>Custom email and password validation are supported.</Typography>
+
+            <Typography variant="body1" sx={loginStyles.paragraph}>
+                At the same time, authentication and authorization are fully provided by Auth0.
+            </Typography>
+            <Typography variant="body1" sx={loginStyles.paragraph}>An explanation of the concept is described in
+                <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href='https://habr.com/ru/articles/722734/'
+                    css={loginStyles.link}>
+                    my article
+                </a>.
             </Typography>
 
             {Object.keys(initState).map(field => (
