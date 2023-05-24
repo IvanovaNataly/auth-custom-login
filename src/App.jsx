@@ -19,7 +19,7 @@ const App = () => {
 
     return (
         <div className={compName} css={styles.app}>
-            <AuthButton />
+            <LoginForm />
         </div>
     )
 };

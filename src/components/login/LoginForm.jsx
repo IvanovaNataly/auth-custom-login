@@ -75,12 +75,6 @@ const LoginForm = () => {
             sx={loginStyles.container}
             onSubmit={handleSubmit}
         >
-            <Avatar
-                alt="Avatar"
-                src="/images/confused_dog.gif"
-                sx={loginStyles.avatar}
-            />
-
             <Typography variant='h1' align='center' color='primary' fontWeight='600' sx={{fontSize: 24, marginBottom: 3}}>
                 Custom Login Page
             </Typography>
